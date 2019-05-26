@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Convonix Assigment</title>
+    <link rel="stylesheet" href="/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Taviraj&display=swap" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140808270-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-140808270-1');
+
+
+        (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)
+            [0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-140808270-1', 'auto');
+
+        ga('send', 'pageview');
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="page-header header">
+            <h1>Form Regstration</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-4 mx-auto">
+                    <!----/imageSelaction.html -->
+                    <form action="/imageSelaction.html" onsubmit="return validateForm()" name="registrationForm">
+                        <div class="form-group">
+                            <label for="Name">Name</label>
+                            <input type="text" class="form-control inputClass" id="name" placeholder="John Dov"
+                                required>
+                            <span class="error" id="nameErrorId" style="color: red; display:none;">Only Text and Number
+                                Allowed</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="Email">Email address</label>
+                            <input type="email" class="form-control inputClass" id="email"
+                                placeholder="example@example.com" required>
+                            <span class="error" id="emailErrorId" style="color: red; display:none;">Please Check Email
+                                Id</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="mobile">Mobile</label>
+                            <input type="tel" class="form-control inputClass" id="mobile"
+                                placeholder="Please add county code eg: +919876543210">
+                            <span class="error" id="mobileErrorId" style="color: red; display:none;">Please Check Mobile
+                                Number</span>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input inputClass" type="radio" name="exampleRadios"
+                                    id="maleRadio" value="option1" checked>
+                                <label class="form-check-label" for="exampleRadios1">
+                                    Male
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input inputClass" type="radio" name="exampleRadios"
+                                    id="femaleRadio" value="option2">
+                                <label class="form-check-label" for="exampleRadios2">
+                                    Female
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input inputClass" type="radio" name="exampleRadios"
+                                    id="otherRadio" value="option3">
+                                <label class="form-check-label" for="exampleRadios3">
+                                    Other
+                                </label>
+                            </div>
+
+                        </div>
+                        <span class="error" id="genderErrorId" style="color: red; display:none;">Please Select
+                            Gender</span>
+                        <div class="form-group" style="padding-top:2%;">
+                            <label for="mobile">Date Of Birth</label>
+                            <div class="row">
+                                <div class="col-sm">
+                                    <label for="sel1">Year</label>
+                                    <select class="form-control dob inputClass" id="year"
+                                        onchange="enableInput(this); return false;">
+                                    </select>
+                                </div>
+                                <div class="col-sm">
+                                    <label for="sel1">Month</label>
+                                    <select class="form-control dob inputClass" id="month" disabled
+                                        onchange="enableInput(this); return false;">
+                                    </select>
+                                </div>
+                                <div class="col-sm">
+                                    <label for="sel1">Day</label>
+                                    <select class="form-control dob inputClass" id="day" disabled>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <span class="error" id="dobErrorId" style="color: red; display:none;">Select All
+                                Vlaues</span>
+                        </div>
+                        <div class="form-group header" style="padding:5px;">
+                            <button type="submit" class="btn btn-primary">Register</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="footer">
+            <p>Copy Right Recived @2019</p>
+        </div>
+
+    </div>
+
+</body>
+<script src="/scripts/scriptJs.js"></script>
+<script>
+    window.onload = function () { dobGenrator(); };
+
+
+
+</script>
+
+</html>
